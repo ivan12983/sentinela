@@ -149,3 +149,20 @@ app.get("/medicacoes", (req, res) => {
 
 // START
 module.exports = app;
+
+const express = require('express');
+const app = express();
+
+// O Render injeta a porta através de process.env.PORT
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('API do Hospital System em execução.');
+});
+
+// Escute a porta dinâmica e utilize '0.0.0.0' como host
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
