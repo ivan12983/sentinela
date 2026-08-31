@@ -202,7 +202,4 @@ app.get('/', (req, res) => {
   res.send('API do Hospital System em execução.');
 });
 
-// Escute a porta dinâmica e utilize '0.0.0.0' como host
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+
