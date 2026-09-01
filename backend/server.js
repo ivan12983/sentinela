@@ -202,4 +202,9 @@ app.get('/', (req, res) => {
   res.send('API do Hospital System em execução.');
 });
 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`hospital rodando na porta ${PORT}`);
+});
 
